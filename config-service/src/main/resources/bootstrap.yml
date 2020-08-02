@@ -21,4 +21,11 @@ spring:
     ignored: /health**,/info**,/metrics**,/trace**
     user:
       name: "guest"
-      password: "135246"
+      password: "s3cr3t"
+
+encrypt:
+  keyStore:
+    location: classpath:/config-server.jks
+    alias: config-server-key
+    password: s3cr3t-2020
+    secret: s3cr3t-2020
