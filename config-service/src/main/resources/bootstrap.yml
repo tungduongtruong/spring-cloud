@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      request-read-timeout: 10
+      server:
+        git:
+          uri: https://github.com/tungduongtruong/config-store.git
+          username: ""
+          password: ""
+          timeout: 10
+      accept-empty: false
+  security:
+    basic:
+      enabled: true
+    path: /**
+    ignored: /health**,/info**,/metrics**,/trace**
+    user:
+      name: "guest"
+      password: "135246"
